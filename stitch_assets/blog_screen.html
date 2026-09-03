@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-card":"#120E21","on-tertiary-container":"#f7f2ff","secondary-fixed":"#eee851","on-secondary-container":"#3b3900","on-secondary-fixed-variant":"#4b4900","on-primary-fixed-variant":"#5b00c5","surface-bright":"#3d364b","inverse-on-surface":"#342d42","surface-variant":"#383147","surface-dim":"#161023","surface":"#161023","outline-variant":"#4a4455","surface-container-low":"#1e182c","on-primary-container":"#f9f1ff","on-error-container":"#ffdad6","on-tertiary-fixed-variant":"#474266","error-container":"#93000a","on-tertiary":"#302c4e","primary-fixed":"#ebddff","primary-container":"#8740fd","primary-fixed-dim":"#d3bbff","secondary-container":"#aaa500","on-error":"#690005","tertiary":"#c8c1ed","secondary":"#d1cb36","surface-container-high":"#2d273b","tertiary-container":"#706b91","surface-container-highest":"#383147","text-muted":"#A39EBA","surface-container-lowest":"#110b1e","secondary-fixed-dim":"#d1cb36","on-surface-variant":"#ccc3d8","on-surface":"#e9defa","on-primary":"#3f008d","inverse-primary":"#7527eb","surface-container":"#221c30","surface-tint":"#d3bbff","outline":"#968da1","tertiary-fixed":"#e5deff","inverse-surface":"#e9defa","error":"#ffb4ab","tertiary-fixed-dim":"#c8c1ed","primary":"#d3bbff","on-tertiary-fixed":"#1b1738","background":"#161023","on-background":"#e9defa","on-secondary":"#343200","on-primary-fixed":"#250059","on-secondary-fixed":"#1e1d00","data-indigo":"#5C46E5"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"20px","max-width":"1280px","margin-desktop":"80px","gutter":"24px","unit":"4px"},"fontFamily":{"headline-sm":["Bricolage Grotesque"],"display-lg":["Bricolage Grotesque"],"body-md":["Hanken Grotesk"],"label-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"body-lg":["Hanken Grotesk"],"headline-md":["Bricolage Grotesque"],"display-lg-mobile":["Bricolage Grotesque"]},"fontSize":{"headline-sm":["24px",{"lineHeight":"32px","fontWeight":"600"}],"display-lg":["64px",{"lineHeight":"72px","letterSpacing":"-0.04em","fontWeight":"800"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"500"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"40px","fontWeight":"600"}],"display-lg-mobile":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-background selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-gutter"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[20px]">terminal</span></div><a class="flex flex-col" data-path="portfolio" href="#"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">DataEngineer<span class="text-primary">.io</span></span><span class="font-label-sm text-label-sm text-text-muted mt-1 uppercase tracking-wider">Architecture &amp; Mastery</span></a></div><nav class="hidden xl:flex items-center gap-6" data-active-classes="bg-primary-container text-on-primary-container rounded-lg px-3 py-1.5 font-medium"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#">Portfolio</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="courses-and-projects" href="#">Courses &amp; Projects</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="guides" href="#">Guides</a><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container rounded-lg px-3 py-1.5 font-medium" data-path="blog" href="#">Blog</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="community" href="#">Community</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-4"><a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 font-label-md text-label-md text-on-primary hover:bg-primary-fixed hover:text-on-primary-fixed transition-all" data-path="join-academy" href="#">Join Academy</a><div class="flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-tertiary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1Wa7EOD6ABzmLEX-yWGgfm6ibOqygpF-H2_FnfrY-Oon2mMgfSTFFASs7wQ7yaGGUVt_kkWSTCP0u0w4KIdnsXEE6HBgSaVrf-w_ZfYJgCPYU18ZsqSB3amP5R-5q6hfEG02GzCRTltr783QwjIC61q0XDmPogKD2UQ4N2iiuiBhEdYbE549sRmxqIci0e0ZIrEjZX9e4v0449KxzyHo6c66ISvHAV9OiyueBjTpWxi-E2YHKyH2UI505Yn"/></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[320px] bg-primary-container/15 blur-[120px] pointer-events-none rounded-full"></div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop py-12 lg:py-16 relative">
+<!-- SECTION 1: HEADER & SEARCH/FILTER CONTROL -->
+<section class="flex flex-col items-start max-w-3xl mb-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm tracking-wider uppercase mb-5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>Technical Insights &amp; Tutorials</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-on-surface tracking-tight mb-4">
+          Engineering The <span class="text-primary">Modern Data Stack</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-muted leading-relaxed mb-8">
+          Deep dives, architectural breakdowns, hands-on SQL tricks, streaming pipeline guides, and career roadmaps for data practitioners.
+        </p>
+<!-- Search & Filter Controls -->
+<div class="w-full flex flex-col gap-4">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">search</span>
+<input class="w-full bg-surface-card text-on-surface font-label-md text-label-md pl-12 pr-28 py-3.5 rounded-xl outline-none focus:bg-surface-container-high transition-colors placeholder:text-outline-variant shadow-sm" id="search-input" placeholder="Search by topic, keyword, stack (e.g. Iceberg, Kafka, DuckDB)..." type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-outline-variant font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container-lowest">
+<span>⌘</span><span>K</span>
+</div>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto w-full pb-2 scrollbar-none" id="filter-pills">
+<button class="filter-btn active whitespace-nowrap px-3.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm transition-all" data-tag="all">
+              All (28)
+            </button>
+<button class="filter-btn whitespace-nowrap px-3.5 py-1.5 rounded-lg bg-surface-card hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-tag="architecture">
+              Architecture &amp; Lakehouse
+            </button>
+<button class="filter-btn whitespace-nowrap px-3.5 py-1.5 rounded-lg bg-surface-card hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-tag="dbt">
+              dbt &amp; Data Modeling
+            </button>
+<button class="filter-btn whitespace-nowrap px-3.5 py-1.5 rounded-lg bg-surface-card hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-tag="streaming">
+              Apache Spark &amp; Streaming
+            </button>
+<button class="filter-btn whitespace-nowrap px-3.5 py-1.5 rounded-lg bg-surface-card hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-tag="olap">
+              Real-Time OLAP
+            </button>
+<button class="filter-btn whitespace-nowrap px-3.5 py-1.5 rounded-lg bg-surface-card hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" data-tag="career">
+              Career &amp; System Design
+            </button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: FEATURED DEEP DIVE (HERO BANNER CARD) -->
+<section class="mb-16">
+<div class="group relative rounded-xl bg-surface-card p-6 lg:p-10 transition-all duration-300 hover:bg-surface-container-low shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Editorial Text -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+                  Featured Guide
+                </span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-wide">14 Min Read</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-text-muted">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+                  18.4k views
+                </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mb-4 group-hover:text-primary transition-colors">
+                Building Real-Time Lakehouses: Apache Iceberg vs Delta Lake in Production
+              </h2>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed mb-6">
+                A deep-dive benchmark comparing partition evolution, ACID guarantees, metadata overhead, and query latency across AWS Athena, DuckDB, and Snowflake engines. Includes production blueprints for file compaction and snapshot lifecycle management.
+              </p>
+<!-- Metadata & CTA -->
+<div class="flex flex-wrap items-center justify-between gap-4 w-full pt-4 bg-surface-card/40 rounded-lg">
+<div class="flex items-center gap-3">
+<img alt="Baraa Khatib Salkini" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wa7EOD6ABzmLEX-yWGgfm6ibOqygpF-H2_FnfrY-Oon2mMgfSTFFASs7wQ7yaGGUVt_kkWSTCP0u0w4KIdnsXEE6HBgSaVrf-w_ZfYJgCPYU18ZsqSB3amP5R-5q6hfEG02GzCRTltr783QwjIC61q0XDmPogKD2UQ4N2iiuiBhEdYbE549sRmxqIci0e0ZIrEjZX9e4v0449KxzyHo6c66ISvHAV9OiyueBjTpWxi-E2YHKyH2UI505Yn"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Baraa Khatib Salkini</span>
+<span class="font-label-sm text-label-sm text-text-muted">May 18, 2025 • Lead Data Architect</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-all" href="#">
+<span>Read Deep Dive</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right Visual Component (Architectural Schematic & Metric Pill) -->
+<div class="lg:col-span-5 relative w-full flex flex-col justify-center">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container flex items-center justify-center p-4">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 opacity-90" data-alt="Hand-drawn architectural system diagram showing the Medallion Data Architecture with Bronze, Silver, and Gold storage layers, streaming ingestion pipelines, SQL query engines, and database tables sketch illustration on a clean technical grid with subtle purple glowing accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW4Plxyj6HPSt62oGQqkAWsUX4ncLLcYETsEdT8iUIEUOogn8NJj22GLhqQxhj1lbDj4cAqGfgApxicwXy4sCCLaqa1mWVe5tO6wcPGVryPqy5tumFlU1gPccNIDtkpWpnkPtNfg6occmo2trPCuYzf3Ul0ykmO1mgUTeXQFkQmija8q3XBVddbLED7EgjI-pkNoZunEKne9RF8e5fBjcCoLPRM5ScbqM8gfPwGpIhUknFh9HIBnlPGA"/>
+<!-- Floating Mini Benchmark Overlay -->
+<div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-lg bg-surface-card/90 backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Parquet Metadata Sync</span>
+<span class="font-label-sm text-label-sm text-text-muted">3.4x faster snapshot discovery</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary/10 px-2 py-0.5 rounded font-mono">BENCHMARK</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: TRENDING ARTICLES GRID (6 CARDS) -->
+<section class="mb-20">
+<div class="flex items-center justify-between mb-8">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-primary tracking-wider font-semibold block mb-1">Architecture &amp; Implementation</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Trending Engineering Breakdowns</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-text-muted hidden sm:inline-block">Sorted by Repertoire Relevance</span>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">tune</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="articles-grid">
+<!-- CARD 1 -->
+<article class="flex flex-col justify-between bg-surface-card rounded-xl p-6 transition-all duration-200 hover:bg-surface-container-low hover:-translate-y-1 shadow-md group" data-category="streaming architecture">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-5 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Technical schematic showing stream processing with Apache Kafka topics feeding Apache Flink workers, with data flow arrows and low latency metrics in a sleek dark purple and neon violet aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFlMRMqbRQrbYkP1oeX9NV0zzkNYXHtSENIBv1rvkiYIKInhg9brl7tYpQK77Te5mueNfE_UyuUAwzFSq71AJAaTBotB0GrB957VhsOkHLhcONR_WsR6BM78Bs73J2QaFZeSdFcRp9odotm-S_Mw-yQR0h69R4hQk1-CcsvS5BriglC2SzpPQTVB8534j6Um5DpGIP_PGBCUzbdXX7dirq2t-jhCUtGpHFba1SkU5d7RTyprHt3Q603g"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-primary">Streaming</span>
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-tertiary">Architecture</span>
+</div>
+<div class="absolute bottom-3 right-3 font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-text-muted">
+                  8 min read
+                </div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-2">
+<span>Apr 29, 2025</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">comment</span> 24 discussions
+                </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug mb-3">
+                The Death of Traditional ETL: Reverse ETL &amp; Stream Processing with Kafka and Flink
+              </h4>
+<p class="font-body-md text-body-md text-text-muted leading-normal line-clamp-3 mb-6">
+                Why daily batch syncs are failing operational needs. We dissect stateful stream joins, out-of-order event handling with watermarks, and syncing enriched facts back into CRMs with sub-second SLA.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">BK</div>
+<span class="font-label-sm text-label-sm text-on-surface">Baraa Salkini</span>
+</div>
+<div class="flex items-center gap-2 text-outline-variant hover:text-primary transition-colors">
+<button aria-label="Bookmark" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<button aria-label="Share" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 2 -->
+<article class="flex flex-col justify-between bg-surface-card rounded-xl p-6 transition-all duration-200 hover:bg-surface-container-low hover:-translate-y-1 shadow-md group" data-category="dbt">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-5 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean DAG data lineage graph visualization displaying interconnected nodes of dbt data models, showing dependencies, tests, and contracts in modern violet and amber accents on dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzQRr7ODtyCOEe35d3e8gZOkn2cHqmQJneM1ygPeMZhV-9Pqhx4GEYvcHvCOVw6W-OlzG9Qk3Cw-us3MTWAN5kTb81M16FzWy02XpwDdAURzYMhakOBZPHNgy5YZ-zhEhPjwY6AxgtQrKzDmateG9hk84-paxf9rIYuGzNq3YhIByVrlevYy9zQornbdAKTX9emLN24QnwvGTBVzla0E0emicoLG5GUIa_BfsP_l_0P0UmQ0k9AA8eRg"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-primary">dbt</span>
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-tertiary">Data Modeling</span>
+</div>
+<div class="absolute bottom-3 right-3 font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-text-muted">
+                  11 min read
+                </div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-2">
+<span>May 04, 2025</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">comment</span> 19 discussions
+                </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug mb-3">
+                Mastering dbt Mesh: Multi-Project Architectures and Governance at Scale
+              </h4>
+<p class="font-body-md text-body-md text-text-muted leading-normal line-clamp-3 mb-6">
+                Breaking monolithic analytics codebases into cross-domain data products using Model Contracts, Access Controls, and Public cross-project refs without breaking downstream dashboards.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">BK</div>
+<span class="font-label-sm text-label-sm text-on-surface">Baraa Salkini</span>
+</div>
+<div class="flex items-center gap-2 text-outline-variant hover:text-primary transition-colors">
+<button aria-label="Bookmark" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<button aria-label="Share" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 3 (VISUAL QUERY SKETCH) -->
+<article class="flex flex-col justify-between bg-surface-card rounded-xl p-6 transition-all duration-200 hover:bg-surface-container-low hover:-translate-y-1 shadow-md group" data-category="architecture olap">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-5 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Hand-drawn whimsical sketch of SQL queries, nested subqueries, table joins with cartoon arrows, and analytical row partitions on light lavender paper background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0lGyBAbi5bPIitKoUd6ZWDLfPuylDH31DrfojJJd4u1QFhT9YURcDKr2VdWhBg7eAeGKdjNRRPzVs9f3HnGCxKmhXCds1jztpCA1gI7TbPQjRf_yzA8WxiHDTc061NLdsK1uTgXL-CI904G8RGNgbSQcivBML9WG6O45oVhS_9QrWqKlUddzl0cV2HrFfe5AArKk596r-FsJHRq0hUArAHg8yhQRw1X-WjhAzMK9WDux67ksn5rfHKw"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-secondary font-semibold">Visual SQL</span>
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-tertiary">Tutorial</span>
+</div>
+<div class="absolute bottom-3 right-3 font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-text-muted">
+                  6 min read
+                </div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-2">
+<span>May 10, 2025</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">comment</span> 41 discussions
+                </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug mb-3">
+                Window Functions Visually Explained: From ROW_NUMBER to DENSE_RANK &amp; LEAD/LAG
+              </h4>
+<p class="font-body-md text-body-md text-text-muted leading-normal line-clamp-3 mb-6">
+                Never confuse framing with partitioning again. Hand-sketched flow diagrams detailing partition evaluation order, cumulative sums with unbounded preceding windows, and rolling aggregations.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">BK</div>
+<span class="font-label-sm text-label-sm text-on-surface">Baraa Salkini</span>
+</div>
+<div class="flex items-center gap-2 text-outline-variant hover:text-primary transition-colors">
+<button aria-label="Bookmark" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<button aria-label="Share" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 4 -->
+<article class="flex flex-col justify-between bg-surface-card rounded-xl p-6 transition-all duration-200 hover:bg-surface-container-low hover:-translate-y-1 shadow-md group" data-category="streaming architecture">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-5 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="3D geometric vector embeddings visualization in multidimensional space with neural nodes, cluster coordinates, and high-tech purple lighting on deep obsidian background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4n_JTycWdf3cGFuS0YLaK6CKA0W1FV4PTTnTzOR45G327s1VlhvuGYoQNUJhiOzodcKx_DrMHeXk5yYVJayCmVhrOiadivXxHwtjkeViQQReKXpUzTwelEwuweC0MnpGcoTTvEQTMrEhoJENnJSb7MRHYPwPi1vhNDwCX8OVeMKs0atBHy8ZRq22Attf_Iz0djvM7EbIeSbtHxAmgjl5zVTcQvsYmi3ie3zj0sIr9K6cBGa6Tnc70zQ"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-primary">AI/ML Infra</span>
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-tertiary">Orchestration</span>
+</div>
+<div class="absolute bottom-3 right-3 font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-text-muted">
+                  9 min read
+                </div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-2">
+<span>Apr 15, 2025</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">comment</span> 16 discussions
+                </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug mb-3">
+                Vector Databases in Data Engineering: Ingesting Embeddings into Pinecone &amp; Milvus via Dagster
+              </h4>
+<p class="font-body-md text-body-md text-text-muted leading-normal line-clamp-3 mb-6">
+                Integrating high-dimensional embeddings into production asset pipelines. Benchmarking HNSW indexing, bulk upsert throughput, and hybrid search pipelines across enterprise warehouses.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">BK</div>
+<span class="font-label-sm text-label-sm text-on-surface">Baraa Salkini</span>
+</div>
+<div class="flex items-center gap-2 text-outline-variant hover:text-primary transition-colors">
+<button aria-label="Bookmark" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<button aria-label="Share" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 5 -->
+<article class="flex flex-col justify-between bg-surface-card rounded-xl p-6 transition-all duration-200 hover:bg-surface-container-low hover:-translate-y-1 shadow-md group" data-category="olap">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-5 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cloud computing consumption dashboard showing multi-warehouse credit charts, clustering key efficiency graphs, and storage cost burn-down metrics with glowing purple accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgwYa24DozdbZ5M2-rmogq2tOWU-LfcA5m-m6X81ai5lhE_FdoztQAny02t7yYerGMSxbG7l2wEczw4FJtcfiGNm2rB9CoucdHO4FA5aScChRBIYjhArWp-TvNzdMFW_7AWxQdUsfCKWnjSiMGcI1NPb-mIJ76IFy-b-oRQ15OeDzoF0HayaRKznu_hTZBUmqo_cVLwtMktX9e7_3nw7ysErNS8kT-B3IwJtmFP8CL0RNR3i4Mnqvvmw"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-secondary font-semibold">FinOps</span>
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-tertiary">Cloud Warehouses</span>
+</div>
+<div class="absolute bottom-3 right-3 font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-text-muted">
+                  12 min read
+                </div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-2">
+<span>Mar 22, 2025</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">comment</span> 37 discussions
+                </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug mb-3">
+                Cost Optimization Strategies for Snowflake and BigQuery: Real-World Lessons from 100TB+ Warehouses
+              </h4>
+<p class="font-body-md text-body-md text-text-muted leading-normal line-clamp-3 mb-6">
+                Cutting warehouse compute spending by 42%. Practical strategies on auto-clustering, query profile exploration, spilled memory tuning, and offloading heavy batch transformations to DuckDB.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">BK</div>
+<span class="font-label-sm text-label-sm text-on-surface">Baraa Salkini</span>
+</div>
+<div class="flex items-center gap-2 text-outline-variant hover:text-primary transition-colors">
+<button aria-label="Bookmark" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<button aria-label="Share" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 6 -->
+<article class="flex flex-col justify-between bg-surface-card rounded-xl p-6 transition-all duration-200 hover:bg-surface-container-low hover:-translate-y-1 shadow-md group" data-category="career architecture">
+<div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden mb-5 bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Minimalist architectural blueprint showing scalable modern data stack components: ingestion engines, storage layers, and BI semantic layers cleanly mapped out with isometric perspective." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRYdG7LTeHRUksgGbpXuunFCaHwh37Kwr9ahAB6RSGwfWnv5n1JfD3q8jDxjeZicxbBYf_hJkAnr-JRrocSOD5fGC9P4QZJRiLzL0_ttPNiHucME_einAS2j4nuhipGeMKp8gQ9L0tifx08W9MV9UJsQC-ptHg4jnTb63B6FE3ZI5itgkuukIYDERYbCEiN6939y8pezezqMYFt5M-mLBmFkzE5fEOD85KLqYjFbk-tCjUzM1vZHrLog"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-primary">Architecture</span>
+<span class="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur font-label-sm text-label-sm text-tertiary">Career Blueprint</span>
+</div>
+<div class="absolute bottom-3 right-3 font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-text-muted">
+                  15 min read
+                </div>
+</div>
+<div class="flex items-center justify-between text-text-muted font-label-sm text-label-sm mb-2">
+<span>Feb 18, 2025</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">comment</span> 53 discussions
+                </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug mb-3">
+                Zero to Production Data Platform: My Blueprint for Early-Stage Tech Startups
+              </h4>
+<p class="font-body-md text-body-md text-text-muted leading-normal line-clamp-3 mb-6">
+                From Day 1 to Series B: Avoiding over-engineering while establishing CI/CD for dbt, setting up alerting before stakeholders notice silent data bugs, and sizing hardware accurately.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">BK</div>
+<span class="font-label-sm text-label-sm text-on-surface">Baraa Salkini</span>
+</div>
+<div class="flex items-center gap-2 text-outline-variant hover:text-primary transition-colors">
+<button aria-label="Bookmark" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<button aria-label="Share" class="p-1.5 hover:bg-surface-container rounded transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 4: TECHNICAL NEWSLETTER BANNER -->
+<section class="mb-20">
+<div class="relative rounded-2xl bg-gradient-to-br from-surface-card via-surface-container to-surface-card p-8 lg:p-12 overflow-hidden shadow-2xl">
+<!-- Background Schematic Watermark -->
+<div class="absolute right-0 top-0 w-96 h-full opacity-5 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[260px] text-primary">account_tree</span>
+</div>
+<div class="max-w-2xl relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm tracking-wider uppercase mb-4">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Visual Architecture Dispatch</span>
+</div>
+<h3 class="font-display-lg text-display-lg-mobile lg:text-headline-md text-on-surface mb-3 tracking-tight">
+              DataNotes Weekly Digest
+            </h3>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed mb-6">
+              Get hand-sketched architecture diagrams, production debugging stories, and practical pipeline patterns straight to your inbox every Sunday morning. No marketing fluff—strictly distributed systems and modern data engineering craft.
+            </p>
+<form class="flex flex-col sm:flex-row items-center gap-3 w-full" onsubmit="event.preventDefault(); alert('Subscribed to DataNotes Digest!');">
+<div class="relative flex-1 w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline-variant text-[18px]">alternate_email</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md pl-10 pr-4 py-3 rounded-lg outline-none focus:bg-surface-card focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant" placeholder="data.lead@company.com" required="" type="email"/>
+</div>
+<button class="w-full sm:w-auto whitespace-nowrap px-6 py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-fixed hover:text-on-primary-fixed transition-all" type="submit">
+                Subscribe Free
+              </button>
+</form>
+<div class="flex items-center gap-4 mt-4 font-label-sm text-label-sm text-text-muted">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified</span>
+                Over 14,200+ engineers reading
+              </span>
+<span>•</span>
+<span>Zero spam, one-click unsubscribe</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: TAGS CLOUD & CURATED COMMUNITY TOPICS -->
+<section class="mb-8">
+<div class="rounded-xl bg-surface-card p-6 lg:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-mono tracking-wider mb-1">Index &amp; Ecosystem</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Trending Technology Tags</h4>
+</div>
+<!-- Dynamic clickable tags -->
+<div class="flex flex-wrap items-center gap-2" id="tag-cloud">
+<button class="tag-pill px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors font-mono">
+              #ApacheIceberg
+            </button>
+<button class="tag-pill px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors font-mono">
+              #DuckDB
+            </button>
+<button class="tag-pill px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors font-mono">
+              #DataContracts
+            </button>
+<button class="tag-pill px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors font-mono">
+              #Polars
+            </button>
+<button class="tag-pill px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors font-mono">
+              #Kafka
+            </button>
+<button class="tag-pill px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors font-mono">
+              #Airflow
+            </button>
+<button class="tag-pill px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors font-mono">
+              #MedallionArchitecture
+            </button>
+<button class="tag-pill px-3 py-1.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors font-mono">
+              #Snowflake
+            </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    (function initBlogHub() {
+      const searchInput = document.getElementById('search-input');
+      const filterPills = document.querySelectorAll('#filter-pills button');
+      const articleCards = document.querySelectorAll('#articles-grid article');
+      const tagPills = document.querySelectorAll('#tag-cloud button');
+
+      function filterArticles() {
+        const query = (searchInput?.value || '').toLowerCase().trim();
+        const activeBtn = document.querySelector('#filter-pills button.active');
+        const activeTag = activeBtn?.dataset?.tag || 'all';
+
+        articleCards.forEach(card => {
+          const textContent = card.innerText.toLowerCase();
+          const categoryMatch = activeTag === 'all' || (card.dataset.category && card.dataset.category.includes(activeTag));
+          const queryMatch = !query || textContent.includes(query);
+
+          if (categoryMatch && queryMatch) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      filterPills.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterPills.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'active');
+            b.classList.add('bg-surface-card', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-card', 'text-on-surface-variant');
+          btn.classList.add('bg-primary', 'text-on-primary', 'active');
+          filterArticles();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterArticles);
+      }
+
+      tagPills.forEach(tag => {
+        tag.addEventListener('click', () => {
+          const rawTag = tag.innerText.replace('#', '').trim();
+          if (searchInput) {
+            searchInput.value = rawTag;
+            filterArticles();
+            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-card"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop py-16"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-12"><div class="md:col-span-5 flex flex-col items-start"><div class="flex items-center gap-2 mb-4"><div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[18px]">database</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">DataEngineer<span class="text-primary">.io</span></span></div><p class="font-body-md text-body-md text-text-muted max-w-sm mb-6">Production-grade blueprints, distributed system patterns, and comprehensive pipelines engineered for high-throughput data practitioners.</p><div class="flex items-center gap-3"><a aria-label="YouTube" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">smart_display</span></a><a aria-label="LinkedIn" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">work</span></a><a aria-label="GitHub" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">code</span></a><a aria-label="Discord" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">forum</span></a></div></div><div class="md:col-span-3 flex flex-col gap-3"><span class="font-label-sm text-label-sm uppercase text-primary tracking-wider">Curriculum &amp; Hub</span><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#">Production Architecture</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="courses-and-projects" href="#">Courses &amp; Real-World Projects</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="guides" href="#">Lakehouse &amp; Streaming Guides</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Analytical Deep Dives</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="community" href="#">Peer Review &amp; Community</a></div><div class="md:col-span-4 flex flex-col"><span class="font-label-sm text-label-sm uppercase text-primary tracking-wider mb-2">The Data Dispatch</span><p class="font-body-md text-body-md text-text-muted mb-4">Weekly architectural tear-downs, Spark optimizations, and Kafka internals right in your inbox.</p><div class="flex items-center gap-2"><input class="flex-1 bg-surface-container-lowest text-on-surface font-label-md text-label-md px-3 py-2 rounded-lg outline-none focus:ring-1 focus:ring-primary placeholder:text-outline-variant" placeholder="engineer@domain.com" type="email"/><a class="inline-flex items-center justify-center px-4 py-2 bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg hover:bg-primary hover:text-on-primary transition-colors" data-path="newsletter" href="#">Subscribe</a></div></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-text-muted"><p>© 2025 DataEngineer.io &amp; Data with Baraa. All systems operational.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" href="#">Architecture Standards</a><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a></div></div></div></footer></body></html>

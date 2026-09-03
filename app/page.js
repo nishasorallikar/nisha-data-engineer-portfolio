@@ -1,69 +1,125 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* TopNavBar */}
+      <nav className="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-md border-b border-outline-variant/10">
+        <div className="flex items-center gap-8">
+          <Link href="/" className="text-headline-sm font-headline-sm font-bold text-primary">
+            DataEngineer.io
+          </Link>
+          <div className="flex gap-6">
+            <Link href="/about" className="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:bg-surface-variant/20 rounded-xl px-3 py-2 transition-colors duration-200">
+              About
+            </Link>
+            <Link href="/blog" className="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:bg-surface-variant/20 rounded-xl px-3 py-2 transition-colors duration-200">
+              Blog
+            </Link>
+            <Link href="/community" className="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:bg-surface-variant/20 rounded-xl px-3 py-2 transition-colors duration-200">
+              Community
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex items-center gap-4">
+          <Link href="mailto:nisha@example.com" className="bg-primary text-background text-label-md font-label-md px-4 py-2 rounded-xl flex items-center gap-2 hover:bg-primary/90 transition-colors">
+            Contact Me
+          </Link>
         </div>
+      </nav>
+
+      {/* Main Content Canvas */}
+      <main className="flex-grow pt-[80px] md:pt-[100px] pb-[80px] md:pb-0 px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto w-full min-h-screen flex items-center">
+        {/* Hero Section */}
+        <section className="w-full py-16 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center relative">
+          
+          <div className="absolute -top-32 left-1/4 -translate-x-1/2 w-[720px] h-[320px] bg-primary-container/15 blur-[120px] pointer-events-none rounded-full"></div>
+
+          <div className="md:col-span-7 flex flex-col gap-6 relative z-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-variant/50 rounded-full border border-tertiary/10 w-fit">
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              <span className="text-label-sm font-label-sm text-secondary tracking-wider uppercase">Open to new opportunities</span>
+            </div>
+            
+            <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface tracking-tight leading-tight">
+              Hi, I'm Nisha. <br/>
+              <span className="text-primary">Data Engineer.</span>
+            </h1>
+            
+            <p className="text-body-lg font-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+              I architect scalable data pipelines and modern lakehouses. I specialize in turning massive datasets into reliable, structured, and fast-performing analytical foundations using Spark, Snowflake, and AWS.
+            </p>
+            
+            <div className="flex gap-4 mt-4">
+              <Link href="/about" className="bg-primary text-background text-label-md font-label-md px-6 py-3 rounded-xl border border-primary/20 hover:bg-primary/90 transition-colors text-center">
+                View My Work
+              </Link>
+              <Link href="/blog" className="bg-transparent border border-tertiary text-primary text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-variant/30 transition-colors flex items-center justify-center gap-2">
+                <span className="material-symbols-outlined text-lg">menu_book</span> Read Blog
+              </Link>
+            </div>
+          </div>
+
+          <div className="md:col-span-5 relative h-[400px] md:h-[500px] rounded-xl overflow-hidden border border-tertiary/10 bg-surface-card flex items-center justify-center group shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-data-indigo/5 z-0 group-hover:from-primary/20 transition-colors duration-500"></div>
+            <div className="relative z-10 w-full h-full p-8 flex flex-col items-center justify-center text-center">
+              <div className="w-40 h-40 rounded-full overflow-hidden mb-6 ring-4 ring-primary/20 p-2 bg-surface-container">
+                 <img src="/profile.png" alt="Nisha" className="w-full h-full object-cover rounded-full" />
+              </div>
+              <div className="grid grid-cols-2 gap-4 w-full">
+                <div className="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center hover:-translate-y-1 transition-transform">
+                  <span className="text-headline-md font-headline-md text-primary">PySpark</span>
+                  <span className="text-label-sm font-label-sm text-on-surface-variant">Expertise</span>
+                </div>
+                <div className="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center hover:-translate-y-1 transition-transform">
+                  <span className="text-headline-md font-headline-md text-secondary">Lakehouse</span>
+                  <span className="text-label-sm font-label-sm text-on-surface-variant">Architecture</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
       </main>
-    </div>
+
+      {/* BottomNavBar (Mobile) */}
+      <nav className="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 bg-surface-container/90 backdrop-blur-xl border-t border-outline-variant/20 shadow-lg rounded-t-full pt-2">
+        <Link className="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full p-2 scale-90 transition-transform duration-150" href="/">
+          <span className="material-symbols-outlined">home</span>
+          <span className="text-label-sm font-label-sm mt-1">Home</span>
+        </Link>
+        <Link className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors" href="/about">
+          <span className="material-symbols-outlined">person</span>
+          <span className="text-label-sm font-label-sm mt-1">About</span>
+        </Link>
+        <Link className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors" href="/blog">
+          <span className="material-symbols-outlined">menu_book</span>
+          <span className="text-label-sm font-label-sm mt-1">Blog</span>
+        </Link>
+        <Link className="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors" href="/community">
+          <span className="material-symbols-outlined">forum</span>
+          <span className="text-label-sm font-label-sm mt-1">Community</span>
+        </Link>
+      </nav>
+
+      {/* Footer */}
+      <footer className="w-full py-16 px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center bg-surface-container-lowest border-t border-outline-variant/10 mt-auto mb-[80px] md:mb-0">
+        <span className="text-headline-sm font-headline-sm text-primary mb-2">DataEngineer.io</span>
+        <p className="text-body-md font-body-md text-on-surface-variant text-center max-w-sm mb-6">
+          Architecting robust data pipelines.
+        </p>
+        <div className="flex gap-4">
+          <Link href="https://github.com/nisha" className="text-on-surface-variant hover:text-primary transition-colors">
+            <span className="material-symbols-outlined text-[24px]">code</span>
+          </Link>
+          <Link href="https://linkedin.com/in/nisha" className="text-on-surface-variant hover:text-primary transition-colors">
+            <span className="material-symbols-outlined text-[24px]">work</span>
+          </Link>
+        </div>
+        <p className="text-label-sm font-label-sm text-text-muted mt-8">
+          © 2025 Nisha Sorallikar. All rights reserved.
+        </p>
+      </footer>
+    </>
   );
 }

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community - DataEngineer.io</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Hanken+Grotesk:wght@400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#1e1d00",
+                        "on-surface-variant": "#ccc3d8",
+                        "tertiary-fixed-dim": "#c8c1ed",
+                        "surface-container": "#221c30",
+                        "surface-container-low": "#1e182c",
+                        "surface-tint": "#d3bbff",
+                        "inverse-on-surface": "#342d42",
+                        "tertiary": "#c8c1ed",
+                        "surface-container-high": "#2d273b",
+                        "on-tertiary-container": "#f7f2ff",
+                        "on-tertiary-fixed-variant": "#474266",
+                        "outline-variant": "#4a4455",
+                        "on-secondary": "#343200",
+                        "on-secondary-fixed-variant": "#4b4900",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#706b91",
+                        "primary-container": "#8740fd",
+                        "secondary": "#d1cb36",
+                        "secondary-fixed-dim": "#d1cb36",
+                        "surface-variant": "#383147",
+                        "on-tertiary": "#302c4e",
+                        "on-primary-container": "#f9f1ff",
+                        "surface-container-lowest": "#110b1e",
+                        "surface": "#161023",
+                        "tertiary-fixed": "#e5deff",
+                        "secondary-container": "#aaa500",
+                        "on-secondary-container": "#3b3900",
+                        "on-surface": "#e9defa",
+                        "surface-container-highest": "#383147",
+                        "text-muted": "#A39EBA",
+                        "on-primary-fixed-variant": "#5b00c5",
+                        "secondary-fixed": "#eee851",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ebddff",
+                        "inverse-surface": "#e9defa",
+                        "on-error-container": "#ffdad6",
+                        "background": "#161023",
+                        "on-primary": "#3f008d",
+                        "surface-bright": "#3d364b",
+                        "on-background": "#e9defa",
+                        "surface-dim": "#161023",
+                        "data-indigo": "#5C46E5",
+                        "on-primary-fixed": "#250059",
+                        "primary": "#d3bbff",
+                        "outline": "#968da1",
+                        "surface-card": "#120E21",
+                        "primary-fixed-dim": "#d3bbff",
+                        "on-tertiary-fixed": "#1b1738",
+                        "inverse-primary": "#7527eb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "max-width": "1280px",
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Bricolage Grotesque"],
+                        "headline-sm": ["Bricolage Grotesque"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Bricolage Grotesque"],
+                        "label-md": ["JetBrains Mono"],
+                        "display-lg": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-md border-b border-outline-variant/10">
+<div class="flex items-center gap-8">
+<a class="text-headline-sm font-headline-sm font-bold text-primary" href="/">DataEngineer.io</a>
+<div class="flex gap-6">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:bg-surface-variant/20 rounded-xl px-3 py-2 transition-colors duration-200" href="/portfolio">Portfolio</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:bg-surface-variant/20 rounded-xl px-3 py-2 transition-colors duration-200" href="/courses">Courses</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:bg-surface-variant/20 rounded-xl px-3 py-2 transition-colors duration-200" href="/guides">Guides</a>
+<a class="text-label-md font-label-md text-primary font-bold border-b-2 border-primary pb-1 px-3 py-2 hover:bg-surface-variant/20 rounded-xl scale-95 transition-transform" href="/about">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-background text-label-md font-label-md px-4 py-2 rounded-xl flex items-center gap-2 hover:bg-primary/90 transition-colors">
+                Join Academy
+            </button>
+<div class="flex gap-2 text-on-surface-variant">
+<button class="hover:text-primary p-2 rounded-xl hover:bg-surface-variant/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</button>
+<button class="hover:text-primary p-2 rounded-xl hover:bg-surface-variant/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[80px] md:pt-[100px] pb-[80px] md:pb-0 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto w-full">
+<!-- Hero Section -->
+<section class="py-16 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-variant/50 rounded-full border border-tertiary/10 w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-label-sm font-label-sm text-secondary">Active Community</span>
+</div>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary">Hear from the <br/>Data With Baraa community</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-lg">
+                    Join thousands of data professionals learning, building, and growing together.
+                </p>
+<div class="flex gap-4 mt-4">
+<a class="bg-primary text-background text-label-md font-label-md px-6 py-3 rounded-xl border border-primary/20 hover:bg-primary/90 transition-colors text-center" href="#testimonials">
+                        Read Stories
+                    </a>
+<a class="bg-transparent border border-tertiary text-primary text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-variant/30 transition-colors flex items-center justify-center gap-2" href="#discord">
+<span class="material-symbols-outlined text-lg">forum</span> Join Discord
+                    </a>
+</div>
+</div>
+<div class="md:col-span-6 relative h-[400px] md:h-[500px] rounded-xl overflow-hidden border border-tertiary/10 bg-surface-card flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-data-indigo/5 z-0"></div>
+<div class="relative z-10 w-full h-full p-8 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-display-lg text-primary/40 mb-4" style="font-variation-settings: 'FILL' 1;">groups</span>
+<div class="grid grid-cols-2 gap-4 w-full max-w-md">
+<div class="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center">
+<span class="text-headline-md font-headline-md text-primary">410k+</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">YouTube Subs</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center">
+<span class="text-headline-md font-headline-md text-secondary">123k+</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Newsletter Subs</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center">
+<span class="text-headline-md font-headline-md text-tertiary">500k+</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Active Learners</span>
+</div>
+<div class="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center">
+<span class="text-headline-md font-headline-md text-data-indigo">350+</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Lectures</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Bento Grid -->
+<section class="py-16 md:py-24" id="testimonials">
+<div class="flex flex-col gap-2 mb-12">
+<h2 class="text-headline-md font-headline-md text-primary">Learner Feedback</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Real results and career growth.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-min">
+<!-- Large Card -->
+<div class="md:col-span-8 bg-surface-card border border-tertiary/10 rounded-xl p-6 md:p-8 flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-center gap-4 mb-2">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-label-md font-label-md font-bold">
+                            HG
+                        </div>
+<div>
+<p class="text-body-md font-body-md font-bold text-on-surface">Hardik G.</p>
+<p class="text-label-sm font-label-sm text-text-muted">August 1, 2025</p>
+</div>
+</div>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+                        "Baara is a phenomenal teacher. I have come to love doing data analysis and data engineering projects with SQL, thanks to this amazing teacher, who takes his time to explain things with animations, bringing absolute clarity to the table. This course is worth much much much more than the price being charged for it. Its a steal deal!!"
+                    </p>
+</div>
+<!-- Small Card 1 -->
+<div class="md:col-span-4 bg-surface-container-low border border-tertiary/10 rounded-xl p-6 flex flex-col gap-4 hover:border-primary/30 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center text-label-sm font-label-sm font-bold">
+                            NK
+                        </div>
+<div>
+<p class="text-body-md font-body-md font-bold text-on-surface">Nitin K.</p>
+<p class="text-label-sm font-label-sm text-text-muted">July 1, 2025</p>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        "I've learned a lot from this course. Very well explained! It's from zero to superhero."
+                    </p>
+</div>
+<!-- Small Card 2 -->
+<div class="md:col-span-4 bg-surface-container-low border border-tertiary/10 rounded-xl p-6 flex flex-col gap-4 hover:border-primary/30 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center text-label-sm font-label-sm font-bold">
+                            BM
+                        </div>
+<div>
+<p class="text-body-md font-body-md font-bold text-on-surface">Barry M.</p>
+<p class="text-label-sm font-label-sm text-text-muted">July 1, 2025</p>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        "Extremely thorough and enjoyable. The most important part for me, especially with learning SQL, is how Baraa helped me to visualize all steps. Would definitely recommend!"
+                    </p>
+</div>
+<!-- Medium Card -->
+<div class="md:col-span-8 bg-surface-card border border-tertiary/10 rounded-xl p-6 flex flex-col gap-4 hover:border-primary/30 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-label-sm font-label-sm font-bold">
+                            PL
+                        </div>
+<div>
+<p class="text-body-md font-body-md font-bold text-on-surface">Prasob L.</p>
+<p class="text-label-sm font-label-sm text-text-muted">July 1, 2025</p>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        "I'm very happy with the course experience. The course was well structured, clear and practical. It matched my learning goals perfectly and helped me with my current work experience. I especially appreciated the exercises and real world examples which made the concepts easy to understand."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Newsletter & Community Split -->
+<section class="py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Newsletter -->
+<div class="bg-surface-container-high border border-outline-variant/20 rounded-xl p-8 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-display-lg" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div class="relative z-10 flex flex-col gap-4 mb-8">
+<div class="inline-block px-2 py-1 bg-secondary/10 text-secondary text-label-sm font-label-sm rounded w-fit">DataNotes</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Subscribe to DataNotes</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        Join 123,000+ curious readers learning to think like data experts. Get weekly lessons, stories, and frameworks from real projects.
+                    </p>
+</div>
+<form class="relative z-10 flex flex-col sm:flex-row gap-4 w-full">
+<div class="flex-grow">
+<label class="sr-only" for="email-subscribe">Email address</label>
+<input class="w-full bg-surface-dim border-0 border-b border-outline-variant text-on-surface font-label-sm text-label-sm px-4 py-3 focus:ring-0 focus:border-primary transition-colors placeholder:text-text-muted" id="email-subscribe" placeholder="Enter your email" type="email"/>
+</div>
+<button class="bg-primary text-background font-label-md text-label-md px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors whitespace-nowrap" type="submit">
+                        Subscribe
+                    </button>
+</form>
+</div>
+<!-- Discord / Hangouts -->
+<div class="bg-surface-card border border-tertiary/10 rounded-xl p-8 flex flex-col justify-between relative overflow-hidden group" id="discord">
+<div class="absolute inset-0 bg-gradient-to-br from-data-indigo/5 to-transparent z-0 group-hover:from-data-indigo/10 transition-colors"></div>
+<div class="relative z-10 flex flex-col gap-4 mb-8">
+<div class="w-12 h-12 bg-[#5865F2]/20 text-[#5865F2] rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Hang out with us on Discord</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        Join a bunch of curious minds who like to talk about data, tech and random memes. Ask questions, share ideas or just lurk and read. It is chill, promise.
+                    </p>
+</div>
+<div class="relative z-10 flex flex-col gap-6">
+<a class="w-fit bg-[#5865F2] text-white font-label-md text-label-md px-6 py-3 rounded-xl hover:bg-[#4752C4] transition-colors flex items-center gap-2 shadow-lg shadow-[#5865F2]/20" href="https://discord.gg/gsVJbMxKcA">
+                        Join Discord <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<div class="pt-6 border-t border-outline-variant/20">
+<p class="text-label-sm font-label-sm text-text-muted mb-3">Other hangouts</p>
+<div class="flex gap-4 text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">play_circle</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">work</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">code</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 bg-surface-container/90 backdrop-blur-xl border-t border-outline-variant/20 shadow-lg rounded-t-full pt-2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors" href="/">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors" href="/projects">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-label-sm font-label-sm mt-1">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors" href="/learning">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-label-sm font-label-sm mt-1">Learning</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full p-2 scale-90 transition-transform duration-150" href="/about">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="text-label-sm font-label-sm mt-1">Academy</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-surface-container-lowest border-t border-outline-variant/10 mt-auto mb-[80px] md:mb-0">
+<div class="flex flex-col gap-4">
+<span class="text-headline-sm font-headline-sm text-primary">DataEngineer.io</span>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-sm">
+                Visual learning for data professionals.
+            </p>
+<p class="text-label-sm font-label-sm text-text-muted mt-4">
+                © 2024 Data Engineer Portfolio. All rights reserved. Visual learning for data professionals.
+            </p>
+</div>
+<div class="flex flex-col md:items-end justify-center gap-4">
+<div class="flex flex-wrap gap-4 md:justify-end">
+<a class="text-label-sm font-label-sm text-text-muted hover:text-secondary underline-offset-4 hover:underline transition-colors" href="#">Twitter</a>
+<a class="text-label-sm font-label-sm text-text-muted hover:text-secondary underline-offset-4 hover:underline transition-colors" href="#">LinkedIn</a>
+<a class="text-label-sm font-label-sm text-text-muted hover:text-secondary underline-offset-4 hover:underline transition-colors" href="#">YouTube</a>
+<a class="text-label-sm font-label-sm text-text-muted hover:text-secondary underline-offset-4 hover:underline transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-sm font-label-sm text-text-muted hover:text-secondary underline-offset-4 hover:underline transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
