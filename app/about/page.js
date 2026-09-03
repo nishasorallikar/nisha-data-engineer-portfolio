@@ -52,12 +52,12 @@ export default function About() {
           
           <FadeIn delay={0.4} className="flex gap-4 mt-8 relative z-10">
             <HoverScale scale={1.05}>
-              <Link href="https://linkedin.com/in/nisha" className="bg-surface-card border border-outline-variant text-on-surface text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-container-high transition-colors flex items-center gap-2">
+              <Link href="https://www.linkedin.com/in/nisha-sorallikar" className="bg-surface-card border border-outline-variant text-on-surface text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-container-high transition-colors flex items-center gap-2">
                 <span className="material-symbols-outlined text-[20px]">work</span> LinkedIn
               </Link>
             </HoverScale>
             <HoverScale scale={1.05}>
-              <Link href="https://github.com/nisha" className="bg-surface-card border border-outline-variant text-on-surface text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-container-high transition-colors flex items-center gap-2">
+              <Link href="https://github.com/nishasorallikar" className="bg-surface-card border border-outline-variant text-on-surface text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-container-high transition-colors flex items-center gap-2">
                 <span className="material-symbols-outlined text-[20px]">code</span> GitHub
               </Link>
             </HoverScale>
@@ -264,10 +264,10 @@ export default function About() {
           Architecting robust data pipelines.
         </p>
         <div className="flex gap-4">
-          <Link href="https://github.com/nisha" className="text-on-surface-variant hover:text-primary transition-colors">
+          <Link href="https://github.com/nishasorallikar" className="text-on-surface-variant hover:text-primary transition-colors">
             <span className="material-symbols-outlined text-[24px]">code</span>
           </Link>
-          <Link href="https://linkedin.com/in/nisha" className="text-on-surface-variant hover:text-primary transition-colors">
+          <Link href="https://www.linkedin.com/in/nisha-sorallikar" className="text-on-surface-variant hover:text-primary transition-colors">
             <span className="material-symbols-outlined text-[24px]">work</span>
           </Link>
         </div>

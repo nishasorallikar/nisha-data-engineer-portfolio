@@ -120,10 +120,10 @@ export default function Home() {
           Architecting robust data pipelines.
         </p>
         <div className="flex gap-4">
-          <Link href="https://github.com/nisha" className="text-on-surface-variant hover:text-primary transition-colors">
+          <Link href="https://github.com/nishasorallikar" className="text-on-surface-variant hover:text-primary transition-colors">
             <span className="material-symbols-outlined text-[24px]">code</span>
           </Link>
-          <Link href="https://linkedin.com/in/nisha" className="text-on-surface-variant hover:text-primary transition-colors">
+          <Link href="https://www.linkedin.com/in/nisha-sorallikar" className="text-on-surface-variant hover:text-primary transition-colors">
             <span className="material-symbols-outlined text-[24px]">work</span>
           </Link>
         </div>
