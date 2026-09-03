@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FadeIn, SlideUp, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations";
 
 export default function Home() {
   return (
@@ -88,11 +89,12 @@ export default function Home() {
 
         {/* Testimonials Bento Grid */}
         <section className="py-16 md:py-24" id="testimonials">
-          <div className="flex flex-col gap-2 mb-12">
+          <FadeIn className="flex flex-col gap-2 mb-12">
             <h2 className="text-headline-md font-headline-md text-primary">Learner Feedback</h2>
             <p className="text-body-md font-body-md text-on-surface-variant">Real results and career growth.</p>
-          </div>
-          <div className="w-full bg-surface-container-low border border-tertiary/10 rounded-xl p-12 flex flex-col items-center justify-center text-center gap-4 mt-6">
+          </FadeIn>
+          
+          <SlideUp className="w-full bg-surface-container-low border border-tertiary/10 rounded-xl p-12 flex flex-col items-center justify-center text-center gap-4 mt-6">
             <div className="w-16 h-16 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center mb-2">
               <span className="material-symbols-outlined text-[32px]">forum</span>
             </div>
@@ -100,7 +102,7 @@ export default function Home() {
             <p className="text-body-md font-body-md text-on-surface-variant max-w-md">
               We're currently gathering reviews and feedback from the community. Check back later to see what others are saying about Nisha's architectural insights and blueprints.
             </p>
-          </div>
+          </SlideUp>
         </section>
 
         {/* Newsletter & Community Split */}

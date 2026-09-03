@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FadeIn, SlideUp, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations";
 
 export default function About() {
   return (
@@ -35,38 +36,42 @@ export default function About() {
         <section className="py-16 md:py-24 flex flex-col items-center text-center relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/10 blur-[100px] pointer-events-none rounded-full z-0"></div>
           
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 ring-4 ring-surface-variant bg-surface-container relative z-10 shadow-2xl">
+          <SlideUp className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 ring-4 ring-surface-variant bg-surface-container relative z-10 shadow-2xl">
              <img src="/profile.png" alt="Nisha Sorallikar" className="w-full h-full object-cover" />
-          </div>
+          </SlideUp>
           
-          <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface relative z-10 mb-2">
+          <FadeIn delay={0.1} className="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface relative z-10 mb-2">
             Nisha Sorallikar
-          </h1>
-          <p className="text-headline-sm font-headline-sm text-primary mb-6 relative z-10">
+          </FadeIn>
+          <FadeIn delay={0.2} className="text-headline-sm font-headline-sm text-primary mb-6 relative z-10">
             Associate Data Engineer
-          </p>
-          <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl relative z-10 leading-relaxed">
+          </FadeIn>
+          <FadeIn delay={0.3} className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl relative z-10 leading-relaxed">
             I specialize in scalable lakehouse architectures, cloud-native processing, and turning raw data chaos into structured analytics. I'm passionate about building high-throughput pipelines that drive business value.
-          </p>
+          </FadeIn>
           
-          <div className="flex gap-4 mt-8 relative z-10">
-            <Link href="https://linkedin.com/in/nisha" className="bg-surface-card border border-outline-variant text-on-surface text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-container-high transition-colors flex items-center gap-2">
-              <span className="material-symbols-outlined text-[20px]">work</span> LinkedIn
-            </Link>
-            <Link href="https://github.com/nisha" className="bg-surface-card border border-outline-variant text-on-surface text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-container-high transition-colors flex items-center gap-2">
-              <span className="material-symbols-outlined text-[20px]">code</span> GitHub
-            </Link>
-          </div>
+          <FadeIn delay={0.4} className="flex gap-4 mt-8 relative z-10">
+            <HoverScale scale={1.05}>
+              <Link href="https://linkedin.com/in/nisha" className="bg-surface-card border border-outline-variant text-on-surface text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-container-high transition-colors flex items-center gap-2">
+                <span className="material-symbols-outlined text-[20px]">work</span> LinkedIn
+              </Link>
+            </HoverScale>
+            <HoverScale scale={1.05}>
+              <Link href="https://github.com/nisha" className="bg-surface-card border border-outline-variant text-on-surface text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-container-high transition-colors flex items-center gap-2">
+                <span className="material-symbols-outlined text-[20px]">code</span> GitHub
+              </Link>
+            </HoverScale>
+          </FadeIn>
         </section>
 
         {/* Experience Timeline */}
         <section className="py-12 md:py-16">
-          <div className="flex items-center gap-3 mb-10">
+          <FadeIn className="flex items-center gap-3 mb-10">
             <span className="material-symbols-outlined text-primary text-[28px]">timeline</span>
             <h2 className="text-headline-md font-headline-md text-on-surface">Experience</h2>
-          </div>
+          </FadeIn>
           
-          <div className="bg-surface-card border border-outline-variant/30 rounded-2xl p-6 md:p-8 flex flex-col gap-6 shadow-lg">
+          <SlideUp className="bg-surface-card border border-outline-variant/30 rounded-2xl p-6 md:p-8 flex flex-col gap-6 shadow-lg">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 border-b border-outline-variant/20 pb-6">
               <div>
                 <h3 className="text-headline-sm font-headline-sm text-on-surface">Associate Data Engineer</h3>
@@ -90,17 +95,17 @@ export default function About() {
                 <span>Implemented Delta Lake architecture to ensure strict ACID transactions and highly reliable batch processing.</span>
               </li>
             </ul>
-          </div>
+          </SlideUp>
         </section>
 
         {/* Skills Bento */}
         <section className="py-12 md:py-16">
-          <div className="flex items-center gap-3 mb-10">
+          <FadeIn className="flex items-center gap-3 mb-10">
             <span className="material-symbols-outlined text-primary text-[28px]">build</span>
             <h2 className="text-headline-md font-headline-md text-on-surface">Core Stack</h2>
-          </div>
+          </FadeIn>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4" delayChildren={0.2} staggerChildren={0.1}>
             {/* Core Tools */}
             {[
               { name: 'PySpark', icon: 'bolt', isMaterial: true },
@@ -112,104 +117,122 @@ export default function About() {
               { name: 'Delta Lake', icon: 'change_history', isMaterial: true },
               { name: 'SQL', icon: 'database', isMaterial: true }
             ].map((skill) => (
-              <div key={skill.name} className="bg-surface-container-low border border-outline-variant/20 rounded-xl p-6 flex flex-col items-center justify-center text-center gap-3 hover:bg-surface-container-high hover:border-primary/40 transition-all duration-300 group hover:-translate-y-1">
-                {skill.isMaterial ? (
-                   <span className="material-symbols-outlined text-[40px] text-on-surface-variant group-hover:text-primary transition-colors">{skill.icon}</span>
-                ) : (
-                   <img src={skill.icon} alt={skill.name} className={`w-10 h-10 ${skill.isImg ? '' : 'grayscale opacity-70'} group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 object-contain`} />
-                )}
-                <span className="text-body-md font-body-md text-on-surface group-hover:text-primary transition-colors">{skill.name}</span>
-              </div>
+              <StaggerItem key={skill.name}>
+                <HoverScale scale={1.05} className="bg-surface-container-low border border-outline-variant/20 rounded-xl p-6 flex flex-col items-center justify-center text-center gap-3 hover:bg-surface-container-high hover:border-primary/40 transition-all duration-300 group cursor-pointer h-full">
+                  {skill.isMaterial ? (
+                     <span className="material-symbols-outlined text-[40px] text-on-surface-variant group-hover:text-primary transition-colors">{skill.icon}</span>
+                  ) : (
+                     <img src={skill.icon} alt={skill.name} className={`w-10 h-10 ${skill.isImg ? '' : 'grayscale opacity-70'} group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 object-contain`} />
+                  )}
+                  <span className="text-body-md font-body-md text-on-surface group-hover:text-primary transition-colors">{skill.name}</span>
+                </HoverScale>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </section>
 
         {/* Projects / Architectures */}
         <section className="py-12 md:py-24">
-          <div className="flex items-center gap-3 mb-10">
+          <FadeIn className="flex items-center gap-3 mb-10">
             <span className="material-symbols-outlined text-primary text-[28px]">architecture</span>
             <h2 className="text-headline-md font-headline-md text-on-surface">Deployed Architectures</h2>
-          </div>
+          </FadeIn>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6" delayChildren={0.2} staggerChildren={0.1}>
             
             {/* Project 1 */}
-            <a href="https://github.com/nishasorallikar/fmcg-data-engineering-pipeline" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-              <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
-                <span className="text-label-sm font-label-sm text-text-muted">fmcg-data-engineering-pipeline</span>
-                <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
-              </div>
-              <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">FMCG Data Engineering Pipeline</h3>
-                <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
-                  End-to-end data pipeline for Fast-Moving Consumer Goods (FMCG), orchestrating data extraction, transformation, and loading for retail analytics.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Data Pipeline</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Analytics</span>
-                </div>
-              </div>
-            </a>
+            <StaggerItem>
+              <HoverScale scale={1.02} className="h-full block">
+                <a href="https://github.com/nishasorallikar/fmcg-data-engineering-pipeline" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
+                  <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
+                    <span className="text-label-sm font-label-sm text-text-muted">fmcg-data-engineering-pipeline</span>
+                    <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-grow">
+                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">FMCG Data Engineering Pipeline</h3>
+                    <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
+                      End-to-end data pipeline for Fast-Moving Consumer Goods (FMCG), orchestrating data extraction, transformation, and loading for retail analytics.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Data Pipeline</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Analytics</span>
+                    </div>
+                  </div>
+                </a>
+              </HoverScale>
+            </StaggerItem>
 
             {/* Project 2 */}
-            <a href="https://github.com/nishasorallikar/supply-chain-control-tower-databricks" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-              <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
-                <span className="text-label-sm font-label-sm text-text-muted">supply-chain-control-tower</span>
-                <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
-              </div>
-              <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Supply Chain Control Tower</h3>
-                <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
-                  Real-time supply chain control tower built on Databricks. Integrates logistics data to provide end-to-end visibility and inventory optimization.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Spark</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Supply Chain</span>
-                </div>
-              </div>
-            </a>
+            <StaggerItem>
+              <HoverScale scale={1.02} className="h-full block">
+                <a href="https://github.com/nishasorallikar/supply-chain-control-tower-databricks" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
+                  <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
+                    <span className="text-label-sm font-label-sm text-text-muted">supply-chain-control-tower</span>
+                    <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-grow">
+                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Supply Chain Control Tower</h3>
+                    <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
+                      Real-time supply chain control tower built on Databricks. Integrates logistics data to provide end-to-end visibility and inventory optimization.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Spark</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Supply Chain</span>
+                    </div>
+                  </div>
+                </a>
+              </HoverScale>
+            </StaggerItem>
 
             {/* Project 3 */}
-            <a href="https://github.com/nishasorallikar/databricks-lakehouse-project" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-              <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
-                <span className="text-label-sm font-label-sm text-text-muted">databricks-lakehouse-project</span>
-                <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
-              </div>
-              <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Databricks Lakehouse</h3>
-                <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
-                  Scalable Lakehouse architecture utilizing Databricks and Delta Lake to process large-scale datasets with ACID transactional guarantees.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Lakehouse</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Delta Lake</span>
-                </div>
-              </div>
-            </a>
+            <StaggerItem>
+              <HoverScale scale={1.02} className="h-full block">
+                <a href="https://github.com/nishasorallikar/databricks-lakehouse-project" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
+                  <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
+                    <span className="text-label-sm font-label-sm text-text-muted">databricks-lakehouse-project</span>
+                    <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-grow">
+                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Databricks Lakehouse</h3>
+                    <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
+                      Scalable Lakehouse architecture utilizing Databricks and Delta Lake to process large-scale datasets with ACID transactional guarantees.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Lakehouse</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Delta Lake</span>
+                    </div>
+                  </div>
+                </a>
+              </HoverScale>
+            </StaggerItem>
 
             {/* Project 4 */}
-            <a href="https://github.com/nishasorallikar/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-              <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
-                <span className="text-label-sm font-label-sm text-text-muted">sql-data-warehouse-project</span>
-                <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
-              </div>
-              <div className="p-6 md:p-8 flex flex-col flex-grow">
-                <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">SQL Data Warehouse</h3>
-                <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
-                  Modern data warehouse built with SQL Server. Features robust ETL processes, dimensional data modeling, and reporting analytics.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">SQL Server</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">ETL</span>
-                  <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Data Modeling</span>
-                </div>
-              </div>
-            </a>
+            <StaggerItem>
+              <HoverScale scale={1.02} className="h-full block">
+                <a href="https://github.com/nishasorallikar/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
+                  <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
+                    <span className="text-label-sm font-label-sm text-text-muted">sql-data-warehouse-project</span>
+                    <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col flex-grow">
+                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">SQL Data Warehouse</h3>
+                    <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
+                      Modern data warehouse built with SQL Server. Features robust ETL processes, dimensional data modeling, and reporting analytics.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">SQL Server</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">ETL</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Data Modeling</span>
+                    </div>
+                  </div>
+                </a>
+              </HoverScale>
+            </StaggerItem>
 
-          </div>
+          </StaggerContainer>
         </section>
 
       </main>

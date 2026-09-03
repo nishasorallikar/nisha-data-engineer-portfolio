@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { FadeIn, SlideUp, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations";
 
 const articles = [
   {
@@ -135,7 +136,7 @@ export default function BlogPage() {
             <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[320px] bg-primary-container/15 blur-[120px] pointer-events-none rounded-full"></div>
             <div className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop py-12 lg:py-16 relative">
               
-              <section className="flex flex-col items-start max-w-3xl mb-12">
+              <FadeIn className="flex flex-col items-start max-w-3xl mb-12">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary text-label-sm tracking-wider uppercase mb-5">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
                   <span>Technical Insights & Tutorials</span>
@@ -172,9 +173,9 @@ export default function BlogPage() {
                     ))}
                   </div>
                 </div>
-              </section>
+              </FadeIn>
 
-              <section className="mb-16">
+              <SlideUp className="mb-16">
                 <div className="group relative rounded-xl bg-surface-card p-6 lg:p-10 transition-all duration-300 hover:bg-surface-container-low shadow-xl">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div className="lg:col-span-7 flex flex-col items-start">
@@ -202,10 +203,12 @@ export default function BlogPage() {
                             <span className="text-label-sm text-text-muted">May 18, 2025 • Lead Data Architect</span>
                           </div>
                         </div>
-                        <Link href="/blog/real-time-lakehouses" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary text-label-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
-                          <span>Read Deep Dive</span>
-                          <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                        </Link>
+                        <HoverScale scale={1.05}>
+                          <Link href="/blog/real-time-lakehouses" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary text-label-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-all block">
+                            <span>Read Deep Dive</span>
+                            <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                          </Link>
+                        </HoverScale>
                       </div>
                     </div>
                     <div className="lg:col-span-5 relative w-full flex flex-col justify-center">
@@ -227,7 +230,7 @@ export default function BlogPage() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </SlideUp>
 
               <section className="mb-20">
                 <div className="flex items-center justify-between mb-8">
@@ -240,50 +243,52 @@ export default function BlogPage() {
                     <span className="material-symbols-outlined text-outline-variant text-[18px]">tune</span>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" delayChildren={0.1} staggerChildren={0.1}>
                   {filteredArticles.map(article => (
-                    <article key={article.id} className="flex flex-col justify-between bg-surface-card rounded-xl p-6 transition-all duration-200 hover:bg-surface-container-low hover:-translate-y-1 shadow-md group">
-                      <div>
-                        <div className="relative w-full h-44 rounded-lg overflow-hidden mb-5 bg-surface-container-high">
-                          <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src={article.image} alt={article.title} />
-                          <div className="absolute top-3 left-3 flex gap-2">
-                            <span className="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-label-sm text-primary">{article.tags[0]}</span>
-                            {article.tags[1] && <span className="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-label-sm text-tertiary">{article.tags[1]}</span>}
+                    <StaggerItem key={article.id}>
+                      <article className="flex flex-col justify-between h-full bg-surface-card rounded-xl p-6 transition-all duration-200 hover:bg-surface-container-low hover:-translate-y-1 shadow-md group">
+                        <div>
+                          <div className="relative w-full h-44 rounded-lg overflow-hidden mb-5 bg-surface-container-high">
+                            <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src={article.image} alt={article.title} />
+                            <div className="absolute top-3 left-3 flex gap-2">
+                              <span className="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-label-sm text-primary">{article.tags[0]}</span>
+                              {article.tags[1] && <span className="px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-label-sm text-tertiary">{article.tags[1]}</span>}
+                            </div>
+                            <div className="absolute bottom-3 right-3 text-label-sm px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-text-muted">
+                              {article.readTime}
+                            </div>
                           </div>
-                          <div className="absolute bottom-3 right-3 text-label-sm px-2 py-0.5 rounded bg-surface-card/90 backdrop-blur text-text-muted">
-                            {article.readTime}
+                          <div className="flex items-center justify-between text-text-muted text-label-sm mb-2">
+                            <span>{article.date}</span>
+                            <span className="flex items-center gap-1">
+                              <span className="material-symbols-outlined text-[14px]">comment</span> {article.comments} discussions
+                            </span>
+                          </div>
+                          <h4 className="text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug mb-3">
+                            {article.title}
+                          </h4>
+                          <p className="text-body-md text-text-muted leading-normal line-clamp-3 mb-6">
+                            {article.excerpt}
+                          </p>
+                        </div>
+                        <div className="pt-4 flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">{article.initials}</div>
+                            <span className="text-label-sm text-on-surface">{article.author}</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-outline-variant hover:text-primary transition-colors">
+                            <button aria-label="Bookmark" className="p-1.5 hover:bg-surface-container rounded transition-colors">
+                              <span className="material-symbols-outlined text-[18px]">bookmark</span>
+                            </button>
+                            <button aria-label="Share" className="p-1.5 hover:bg-surface-container rounded transition-colors">
+                              <span className="material-symbols-outlined text-[18px]">share</span>
+                            </button>
                           </div>
                         </div>
-                        <div className="flex items-center justify-between text-text-muted text-label-sm mb-2">
-                          <span>{article.date}</span>
-                          <span className="flex items-center gap-1">
-                            <span className="material-symbols-outlined text-[14px]">comment</span> {article.comments} discussions
-                          </span>
-                        </div>
-                        <h4 className="text-headline-sm text-on-surface group-hover:text-primary transition-colors leading-snug mb-3">
-                          {article.title}
-                        </h4>
-                        <p className="text-body-md text-text-muted leading-normal line-clamp-3 mb-6">
-                          {article.excerpt}
-                        </p>
-                      </div>
-                      <div className="pt-4 flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <div className="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-xs font-bold">{article.initials}</div>
-                          <span className="text-label-sm text-on-surface">{article.author}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-outline-variant hover:text-primary transition-colors">
-                          <button aria-label="Bookmark" className="p-1.5 hover:bg-surface-container rounded transition-colors">
-                            <span className="material-symbols-outlined text-[18px]">bookmark</span>
-                          </button>
-                          <button aria-label="Share" className="p-1.5 hover:bg-surface-container rounded transition-colors">
-                            <span className="material-symbols-outlined text-[18px]">share</span>
-                          </button>
-                        </div>
-                      </div>
-                    </article>
+                      </article>
+                    </StaggerItem>
                   ))}
-                </div>
+                </StaggerContainer>
               </section>
 
               <section className="mb-20">

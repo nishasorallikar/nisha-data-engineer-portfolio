@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FadeIn, SlideUp, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations";
 
 export default function Home() {
   return (
@@ -35,49 +36,59 @@ export default function Home() {
           
           <div className="absolute -top-32 left-1/4 -translate-x-1/2 w-[720px] h-[320px] bg-primary-container/15 blur-[120px] pointer-events-none rounded-full"></div>
 
-          <div className="md:col-span-7 flex flex-col gap-6 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-variant/50 rounded-full border border-tertiary/10 w-fit">
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-              <span className="text-label-sm font-label-sm text-secondary tracking-wider uppercase">Open to new opportunities</span>
-            </div>
+          <StaggerContainer className="md:col-span-7 flex flex-col gap-6 relative z-10" delayChildren={0.2} staggerChildren={0.15}>
+            <StaggerItem>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-variant/50 rounded-full border border-tertiary/10 w-fit">
+                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                <span className="text-label-sm font-label-sm text-secondary tracking-wider uppercase">Open to new opportunities</span>
+              </div>
+            </StaggerItem>
             
-            <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface tracking-tight leading-tight">
-              Hi, I'm Nisha. <br/>
-              <span className="text-primary">Data Engineer.</span>
-            </h1>
+            <StaggerItem>
+              <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface tracking-tight leading-tight">
+                Hi, I'm Nisha. <br/>
+                <span className="text-primary">Data Engineer.</span>
+              </h1>
+            </StaggerItem>
             
-            <p className="text-body-lg font-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-              I architect scalable data pipelines and modern lakehouses. I specialize in turning massive datasets into reliable, structured, and fast-performing analytical foundations using Spark, Snowflake, and AWS.
-            </p>
+            <StaggerItem>
+              <p className="text-body-lg font-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+                I architect scalable data pipelines and modern lakehouses. I specialize in turning massive datasets into reliable, structured, and fast-performing analytical foundations using Spark, Snowflake, and AWS.
+              </p>
+            </StaggerItem>
             
-            <div className="flex gap-4 mt-4">
-              <Link href="/about" className="bg-primary text-background text-label-md font-label-md px-6 py-3 rounded-xl border border-primary/20 hover:bg-primary/90 transition-colors text-center">
-                View My Work
-              </Link>
-              <Link href="/blog" className="bg-transparent border border-tertiary text-primary text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-variant/30 transition-colors flex items-center justify-center gap-2">
-                <span className="material-symbols-outlined text-lg">menu_book</span> Read Blog
-              </Link>
-            </div>
-          </div>
+            <StaggerItem className="flex gap-4 mt-4">
+              <HoverScale scale={1.05}>
+                <Link href="/about" className="bg-primary text-background text-label-md font-label-md px-6 py-3 rounded-xl border border-primary/20 hover:bg-primary/90 transition-colors text-center block">
+                  View My Work
+                </Link>
+              </HoverScale>
+              <HoverScale scale={1.05}>
+                <Link href="/blog" className="bg-transparent border border-tertiary text-primary text-label-md font-label-md px-6 py-3 rounded-xl hover:bg-surface-variant/30 transition-colors flex items-center justify-center gap-2 block">
+                  <span className="material-symbols-outlined text-lg">menu_book</span> Read Blog
+                </Link>
+              </HoverScale>
+            </StaggerItem>
+          </StaggerContainer>
 
-          <div className="md:col-span-5 relative h-[400px] md:h-[500px] rounded-xl overflow-hidden border border-tertiary/10 bg-surface-card flex items-center justify-center group shadow-2xl">
+          <SlideUp delay={0.4} className="md:col-span-5 relative h-[400px] md:h-[500px] rounded-xl overflow-hidden border border-tertiary/10 bg-surface-card flex items-center justify-center group shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-data-indigo/5 z-0 group-hover:from-primary/20 transition-colors duration-500"></div>
             <div className="relative z-10 w-full h-full p-8 flex flex-col items-center justify-center text-center">
               <div className="w-40 h-40 rounded-full overflow-hidden mb-6 ring-4 ring-primary/20 p-2 bg-surface-container">
                  <img src="/profile.png" alt="Nisha" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
-                <div className="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center hover:-translate-y-1 transition-transform">
+                <HoverScale scale={1.05} className="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center">
                   <span className="text-headline-md font-headline-md text-primary">PySpark</span>
                   <span className="text-label-sm font-label-sm text-on-surface-variant">Expertise</span>
-                </div>
-                <div className="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center hover:-translate-y-1 transition-transform">
+                </HoverScale>
+                <HoverScale scale={1.05} className="bg-surface-container p-4 rounded-xl border border-outline-variant/20 flex flex-col items-center">
                   <span className="text-headline-md font-headline-md text-secondary">Lakehouse</span>
                   <span className="text-label-sm font-label-sm text-on-surface-variant">Architecture</span>
-                </div>
+                </HoverScale>
               </div>
             </div>
-          </div>
+          </SlideUp>
 
         </section>
       </main>
