@@ -8,7 +8,7 @@ export default function Home() {
       <nav className="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-md border-b border-outline-variant/10">
         <div className="flex items-center gap-8">
           <Link href="/" className="text-headline-sm font-headline-sm font-bold text-primary">
-            DataEngineer.io
+            Nisha Sorallikar
           </Link>
           <div className="flex gap-6">
             <Link href="/about" className="text-label-md font-label-md text-on-surface-variant hover:text-primary hover:bg-surface-variant/20 rounded-xl px-3 py-2 transition-colors duration-200">
@@ -183,7 +183,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-surface-container-lowest border-t border-outline-variant/10 mt-auto mb-[80px] md:mb-0">
         <div className="flex flex-col gap-4">
-          <span className="text-headline-sm font-headline-sm text-primary">DataEngineer.io</span>
+          <span className="text-headline-sm font-headline-sm text-primary">Nisha Sorallikar</span>
           <p className="text-body-md font-body-md text-on-surface-variant max-w-sm">
             Visual learning for data professionals.
           </p>

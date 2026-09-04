@@ -8,7 +8,7 @@ export default function About() {
       <nav className="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-md border-b border-outline-variant/10">
         <div className="flex items-center gap-8">
           <Link href="/" className="text-headline-sm font-headline-sm font-bold text-primary">
-            DataEngineer.io
+            Nisha Sorallikar
           </Link>
           <div className="flex gap-6">
             <Link href="/about" className="text-label-md font-label-md text-primary font-bold border-b-2 border-primary pb-1 px-3 py-2 hover:bg-surface-variant/20 rounded-xl scale-95 transition-transform">
@@ -259,7 +259,7 @@ export default function About() {
 
       {/* Footer */}
       <footer className="w-full py-16 px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center bg-surface-container-lowest border-t border-outline-variant/10 mt-auto mb-[80px] md:mb-0">
-        <span className="text-headline-sm font-headline-sm text-primary mb-2">DataEngineer.io</span>
+        <span className="text-headline-sm font-headline-sm text-primary mb-2">Nisha Sorallikar</span>
         <p className="text-body-md font-body-md text-on-surface-variant text-center max-w-sm mb-6">
           Architecting robust data pipelines.
         </p>
