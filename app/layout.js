@@ -27,8 +27,8 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata = {
-  title: "Nisha Sorallikar | Associate Data Engineer",
-  description: "Portfolio of Nisha Sorallikar, Associate Data Engineer specializing in Lakehouse architectures, PySpark, and AWS.",
+  title: "Nisha Sorallikar | Data Analyst",
+  description: "Portfolio of Nisha Sorallikar, Data Analyst specializing in exploratory data analysis, KPI reporting, and dashboard development.",
 };
 
 export default function RootLayout({ children }) {

@@ -47,13 +47,13 @@ export default function Home() {
             <StaggerItem>
               <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface tracking-tight leading-tight">
                 Hi, I'm Nisha. <br/>
-                <span className="text-primary">Data Engineer.</span>
+                <span className="text-primary">Data Analyst.</span>
               </h1>
             </StaggerItem>
             
             <StaggerItem>
               <p className="text-body-lg font-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-                I architect scalable data pipelines and modern lakehouses. I specialize in turning massive datasets into reliable, structured, and fast-performing analytical foundations using Spark, Snowflake, and AWS.
+                I analyze massive datasets to identify actionable business insights. I specialize in exploratory data analysis, KPI tracking, and building interactive dashboards using SQL, Python, Power BI, and Tableau.
               </p>
             </StaggerItem>
             

@@ -44,10 +44,10 @@ export default function About() {
             Nisha Sorallikar
           </FadeIn>
           <FadeIn delay={0.2} className="text-headline-sm font-headline-sm text-primary mb-6 relative z-10">
-            Associate Data Engineer
+            Data Analyst
           </FadeIn>
           <FadeIn delay={0.3} className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl relative z-10 leading-relaxed">
-            I specialize in scalable lakehouse architectures, cloud-native processing, and turning raw data chaos into structured analytics. I'm passionate about building high-throughput pipelines that drive business value.
+            I specialize in exploratory data analysis, KPI reporting, and turning complex data into actionable business insights. I'm passionate about building interactive dashboards that drive strategic decisions.
           </FadeIn>
           
           <FadeIn delay={0.4} className="flex gap-4 mt-8 relative z-10">
@@ -74,7 +74,7 @@ export default function About() {
           <SlideUp className="bg-surface-card border border-outline-variant/30 rounded-2xl p-6 md:p-8 flex flex-col gap-6 shadow-lg">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 border-b border-outline-variant/20 pb-6">
               <div>
-                <h3 className="text-headline-sm font-headline-sm text-on-surface">Associate Data Engineer</h3>
+                <h3 className="text-headline-sm font-headline-sm text-on-surface">Data Analyst</h3>
                 <p className="text-body-md font-body-md text-primary mt-1">Cynosure Software Solutions</p>
               </div>
               <div className="inline-flex items-center px-3 py-1 bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm rounded-lg whitespace-nowrap h-fit">
@@ -84,15 +84,15 @@ export default function About() {
             <ul className="space-y-4 text-body-md font-body-md text-on-surface-variant">
               <li className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
-                <span>Engineered and optimized high-throughput data pipelines using PySpark and Databricks, processing over 10M+ records daily.</span>
+                <span>Conducted comprehensive data analysis on datasets containing 10M+ daily records using SQL and Python, improving process efficiency by 15%.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
-                <span>Managed robust cloud infrastructure and scalable data storage solutions natively on AWS.</span>
+                <span>Developed interactive KPI dashboards in Power BI and Tableau, reducing manual data tracking efforts by 20 hours/week.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
-                <span>Implemented Delta Lake architecture to ensure strict ACID transactions and highly reliable batch processing.</span>
+                <span>Performed extensive data cleaning, validation, and Exploratory Data Analysis (EDA), achieving 99.9% data accuracy.</span>
               </li>
             </ul>
           </SlideUp>
@@ -108,14 +108,14 @@ export default function About() {
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4" delayChildren={0.2} staggerChildren={0.1}>
             {/* Core Tools */}
             {[
-              { name: 'PySpark', icon: 'bolt', isMaterial: true },
-              { name: 'Databricks', icon: 'hexagon', isMaterial: true },
-              { name: 'Snowflake', icon: 'ac_unit', isMaterial: true },
-              { name: 'AWS', icon: 'cloud', isMaterial: true },
+              { name: 'SQL', icon: 'database', isMaterial: true },
               { name: 'Python', icon: 'code', isMaterial: true },
-              { name: 'Airflow', icon: 'air', isMaterial: true },
-              { name: 'Delta Lake', icon: 'change_history', isMaterial: true },
-              { name: 'SQL', icon: 'database', isMaterial: true }
+              { name: 'Power BI', icon: 'bar_chart', isMaterial: true },
+              { name: 'Tableau', icon: 'pie_chart', isMaterial: true },
+              { name: 'Pandas', icon: 'table', isMaterial: true },
+              { name: 'EDA', icon: 'analytics', isMaterial: true },
+              { name: 'Excel', icon: 'grid_on', isMaterial: true },
+              { name: 'Data Cleaning', icon: 'cleaning_services', isMaterial: true }
             ].map((skill) => (
               <StaggerItem key={skill.name}>
                 <HoverScale scale={1.05} className="bg-surface-container-low border border-outline-variant/20 rounded-xl p-6 flex flex-col items-center justify-center text-center gap-3 hover:bg-surface-container-high hover:border-primary/40 transition-all duration-300 group cursor-pointer h-full">
@@ -135,7 +135,7 @@ export default function About() {
         <section className="py-12 md:py-24">
           <FadeIn className="flex items-center gap-3 mb-10">
             <span className="material-symbols-outlined text-primary text-[28px]">architecture</span>
-            <h2 className="text-headline-md font-headline-md text-on-surface">Deployed Architectures</h2>
+            <h2 className="text-headline-md font-headline-md text-on-surface">Data Projects</h2>
           </FadeIn>
           
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6" delayChildren={0.2} staggerChildren={0.1}>
@@ -143,20 +143,20 @@ export default function About() {
             {/* Project 1 */}
             <StaggerItem>
               <HoverScale scale={1.02} className="h-full block">
-                <a href="https://github.com/nishasorallikar/fmcg-data-engineering-pipeline" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
+                <a href="https://github.com/nishasorallikar/logistics-event-analytics" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
                   <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
-                    <span className="text-label-sm font-label-sm text-text-muted">fmcg-data-engineering-pipeline</span>
+                    <span className="text-label-sm font-label-sm text-text-muted">logistics-event-analytics</span>
                     <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
                   </div>
                   <div className="p-6 md:p-8 flex flex-col flex-grow">
-                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">FMCG Data Engineering Pipeline</h3>
+                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Manufacturing Analytics</h3>
                     <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
-                      End-to-end data pipeline for Fast-Moving Consumer Goods (FMCG), orchestrating data extraction, transformation, and loading for retail analytics.
+                      Leveraged Python, Pandas, and NumPy to clean and analyze logistics event data. Developed interactive Power BI dashboards to monitor logistics KPIs and operational performance.
                     </p>
                     <div className="flex flex-wrap gap-2 mt-auto">
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Data Pipeline</span>
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Analytics</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Python</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Pandas</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Power BI</span>
                     </div>
                   </div>
                 </a>
@@ -166,66 +166,20 @@ export default function About() {
             {/* Project 2 */}
             <StaggerItem>
               <HoverScale scale={1.02} className="h-full block">
-                <a href="https://github.com/nishasorallikar/supply-chain-control-tower-databricks" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
+                <a href="https://github.com/nishasorallikar/supply-chain-demand-analytics" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
                   <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
-                    <span className="text-label-sm font-label-sm text-text-muted">supply-chain-control-tower</span>
+                    <span className="text-label-sm font-label-sm text-text-muted">supply-chain-demand-analytics</span>
                     <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
                   </div>
                   <div className="p-6 md:p-8 flex flex-col flex-grow">
-                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Supply Chain Control Tower</h3>
+                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Supply Chain Analytics</h3>
                     <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
-                      Real-time supply chain control tower built on Databricks. Integrates logistics data to provide end-to-end visibility and inventory optimization.
+                      Designed SQL-based data extraction workflows to analyze inventory levels. Conducted EDA and developed Tableau dashboards to identify demand trends and optimization opportunities.
                     </p>
                     <div className="flex flex-wrap gap-2 mt-auto">
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Spark</span>
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Supply Chain</span>
-                    </div>
-                  </div>
-                </a>
-              </HoverScale>
-            </StaggerItem>
-
-            {/* Project 3 */}
-            <StaggerItem>
-              <HoverScale scale={1.02} className="h-full block">
-                <a href="https://github.com/nishasorallikar/databricks-lakehouse-project" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-                  <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
-                    <span className="text-label-sm font-label-sm text-text-muted">databricks-lakehouse-project</span>
-                    <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
-                  </div>
-                  <div className="p-6 md:p-8 flex flex-col flex-grow">
-                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Databricks Lakehouse</h3>
-                    <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
-                      Scalable Lakehouse architecture utilizing Databricks and Delta Lake to process large-scale datasets with ACID transactional guarantees.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mt-auto">
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Lakehouse</span>
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Databricks</span>
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Delta Lake</span>
-                    </div>
-                  </div>
-                </a>
-              </HoverScale>
-            </StaggerItem>
-
-            {/* Project 4 */}
-            <StaggerItem>
-              <HoverScale scale={1.02} className="h-full block">
-                <a href="https://github.com/nishasorallikar/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer" className="bg-surface-card border border-outline-variant/30 rounded-2xl flex flex-col h-full overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-                  <div className="bg-surface-container-high px-5 py-3 border-b border-outline-variant/20 flex items-center justify-between gap-2">
-                    <span className="text-label-sm font-label-sm text-text-muted">sql-data-warehouse-project</span>
-                    <span className="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">open_in_new</span>
-                  </div>
-                  <div className="p-6 md:p-8 flex flex-col flex-grow">
-                    <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">SQL Data Warehouse</h3>
-                    <p className="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
-                      Modern data warehouse built with SQL Server. Features robust ETL processes, dimensional data modeling, and reporting analytics.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mt-auto">
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">SQL Server</span>
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">ETL</span>
-                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Data Modeling</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">SQL</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">EDA</span>
+                      <span className="px-3 py-1 bg-surface-container border border-outline-variant/20 rounded-lg text-label-sm font-label-sm text-secondary">Tableau</span>
                     </div>
                   </div>
                 </a>
